@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="stylhnrs.css">
+</head>
+
+
+<body>
+
+
+
+
+
+<div class="navbar">
+<Center><h3><b>Cloud computing project<i></i></b><h3/><center/>
+ <center><a href="Tools.html">Tools</a>
+
+ <a href="Methods.html">Methods</a>
+  
+  <a href="Issues.html">Issues</a>
+  
+  <a href="Process.html">Processes</a>
+  <a href="Benefits.html">Benefits</a>
+
+ <a href="scripts.html">Custom scripts</a>
+  
+  <a href="migration.html">Cloud migration</a>
+  
+  <a href="index.html">Cloud storage</a><center/>
+</div>
+ 
+  
+    
+  <div class="row">
+  <div class="column side">
+  
+
+
+
+
+</center>
+
+  </div>
+  
+  <div class="column middle">
+   <center><img src="cloud.jpg" height="400px" alt="icon"></center>
+  </div>
+  
+  <div class="column side">
+
+<p>
+<h3>Explain data migration in terms of custom scripts and native database replication ?</h3></br></br>
+ <h4>Some reasons for building database migration functionality instead of using a database migration system or database management system functionality include the following:
+</h4></br>•	You need full control over every detail.</br></br>
+•	You want to reuse functionality.</br></br>
+•	You want to reduce costs or simplify your technological footprint.</br></br>
+<h4>Building blocks for building migration functionality include the following:</h4></br></br>
+•	<b>Export/import:</b> If downtime is not a factor, you can use database export and database import to migrate data in homogenous database migrations. Export/import, however, requires that you quiesce the source database to prevent updates before you export the data. Otherwise, changes might not be captured in the export, and the target database will not be an exact copy of the source database.
+</br></br>•<b>	Backup/restore</b>: Like in the case of export/import, backup/restore incurs downtime because you need to quiesce the source database so that the backup contains all data and the latest changes. The downtime continues until the restore is completed successfully on the target database.
+</br></br>•<b>	Differential querying</b>: If changing the database schema is an option, you can extend the schema so that database changes can be queried at the query interface. An additional timestamp attribute is added, indicating the time of the last change. An additional delete flag can be added, indicating if the data item is deleted or not (logical delete). With these two changes, a poller executing in a regular interval can query all changes since its last execution. The changes are applied to the target database. </br> </br>
+These are only a few of the possible options to build a custom database migration. Although a custom solution provides the most flexibility and control over implementation, it also requires constant maintenance to address bugs, scalability limitations, and other issues that might arise during a database migration.
+
+
+</p>
+  </div>
+</div>
+
+<div class="footer">
+  
+</div>
+  
+
+</body>
+</html>
